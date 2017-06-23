@@ -1,0 +1,35 @@
+@import "variables";
+
+html {
+  background-color: #e7e7e7;
+}
+body {
+  height: 100%;
+  background-color: #e7e7e7;
+  font-family: 'Roboto', sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-size: 16px;
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+  }
+  a {
+    color: $primary-color ;
+    cursor: pointer;
+  }
+  ul {
+  margin: 0;
+  padding: 0;
+  }
+  .dialog-container {
+
+  }
+  .card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+  .card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+}

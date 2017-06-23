@@ -1,0 +1,124 @@
+/* app css stylesheet */
+html {
+  background-color: #e7e7e7; }
+
+body {
+  height: 100%;
+  background-color: #e7e7e7;
+  font-family: 'Roboto', sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-size: 16px; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-weight: normal; }
+  body a {
+    color: #ff8f00;
+    cursor: pointer; }
+  body ul {
+    margin: 0;
+    padding: 0; }
+  body .card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  body .card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+/*
+$layout-breakpoint-xs: 600px !default;
+*/
+/*
+!* Small devices (tablets, 768px and up) *!
+@media (min-width: @screen-sm-min) { ... }
+
+!* Medium devices (desktops, 992px and up) *!
+@media (min-width: @screen-md-min) { ... }
+
+!* Large devices (large desktops, 1200px and up) *!
+@media (min-width: @screen-lg-min) { ... }*/
+/*
+$layout-breakpoint-xs: 600px !default;
+*/
+/*
+!* Small devices (tablets, 768px and up) *!
+@media (min-width: @screen-sm-min) { ... }
+
+!* Medium devices (desktops, 992px and up) *!
+@media (min-width: @screen-md-min) { ... }
+
+!* Large devices (large desktops, 1200px and up) *!
+@media (min-width: @screen-lg-min) { ... }*/
+#tags-map-cont {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+  #tags-map-cont .header {
+    width: 100%;
+    background-color: #FF8F00;
+    z-index: 1; }
+    #tags-map-cont .header h2 {
+      margin: 0;
+      padding: 30px;
+      color: #ffffff; }
+    #tags-map-cont .header .form-controls {
+      background-color: #f1f1f1;
+      height: auto;
+      padding: 20px 0px;
+      display: table;
+      width: 100%; }
+      #tags-map-cont .header .form-controls .form-input-cont {
+        position: relative;
+        float: left;
+        width: 150px;
+        text-align: left; }
+        #tags-map-cont .header .form-controls .form-input-cont.wide {
+          width: 210px; }
+        @media (max-width: 499px) {
+          #tags-map-cont .header .form-controls .form-input-cont {
+            text-align: center;
+            width: 100%; }
+            #tags-map-cont .header .form-controls .form-input-cont.wide {
+              width: 100%; } }
+        #tags-map-cont .header .form-controls .form-input-cont .time-picker {
+          width: 100px; }
+          #tags-map-cont .header .form-controls .form-input-cont .time-picker * {
+            display: inline-block;
+            padding: 2px; }
+          #tags-map-cont .header .form-controls .form-input-cont .time-picker md-input-container {
+            padding: 0px;
+            margin: 0;
+            vertical-align: initial;
+            font-size: 14px;
+            line-height: 14px; }
+          #tags-map-cont .header .form-controls .form-input-cont .time-picker .time-colon {
+            top: 4px; }
+          #tags-map-cont .header .form-controls .form-input-cont .time-picker .md-icon-button {
+            display: none; }
+          #tags-map-cont .header .form-controls .form-input-cont .time-picker md-hours-minutes {
+            display: inline-block; }
+        #tags-map-cont .header .form-controls .form-input-cont .search-btn {
+          background-color: #ff8f00; }
+        #tags-map-cont .header .form-controls .form-input-cont .tip {
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 45px; }
+  #tags-map-cont .map-cont {
+    flex: 1;
+    width: 100%; }
+    #tags-map-cont .map-cont #map {
+      height: 100%; }
+  #tags-map-cont .loader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 200px auto;
+    width: 150px;
+    /*
+    margin: 200px auto;
+    */ }
+    #tags-map-cont .loader img {
+      width: 100%; }
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,37 @@
+<div id="tags-map-cont">
+    <header class="header">
+        <h2>
+            Awear - Tags Map
+        </h2>
+        <div class="form-controls">
+            <div>
+                <div class="form-input-cont wide" >
+                    <md-datepicker ng-model="ctrl.searchDate"  md-open-on-focus md-placeholder="When?"></md-datepicker>
+
+                </div>
+                <div class="form-input-cont">
+                    <md-time-picker class="time-picker" ng-model="ctrl.fromHour" message="message"
+                                    mandatory="required" no-meridiem no-auto-switch></md-time-picker>
+                </div>
+                <div class="form-input-cont">
+                    <md-time-picker class="time-picker" ng-model="ctrl.toHour"  message="message"
+                                    mandatory="required" no-meridiem no-auto-switch read-only="true"></md-time-picker>
+                </div>
+                <div class="form-input-cont">
+                    <md-button class="btn btn-primary search-btn md-raised" ng-click="ctrl.searchTags()">Search Tags</md-button>
+                </div>
+                <div class="form-input-cont wide">
+                    <div class="tip">* Tip : Set date to 6/23/2017</div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div ng-hide="ctrl.dataLoaded" class="loader">
+        <img src="/assets/images/reviews-loader.gif">
+    </div>
+    <div class="map-cont">
+        <div id="map"></div>
+    </div>
+</div>
+

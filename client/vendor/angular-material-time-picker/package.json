@@ -1,0 +1,57 @@
+{
+  "name": "angular-material-time-picker",
+  "version": "1.0.6",
+  "description": "Material design time picker for 12 hour and 24 hour time",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/classlinkinc/angular-material-time-picker.git"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "time",
+    "picker",
+    "material",
+    "design"
+  ],
+  "author": {
+    "name": "Matt Bajorek"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/classlinkinc/angular-material-time-picker/issues"
+  },
+  "homepage": "https://github.com/classlinkinc/angular-material-time-picker#readme",
+  "peerDependencies": {
+    "angular": "^1.5.0",
+    "angular-material": "^1.0.0"
+  },
+  "gitHead": "25e8abb3ab1bdf2e5ee600dc3b7fef7ce71a4930",
+  "_id": "angular-material-time-picker@1.0.6",
+  "scripts": {},
+  "_shasum": "731310da0fef7ad10a49d6fa207b7dbf9627b426",
+  "_from": "angular-material-time-picker@latest",
+  "_npmVersion": "3.10.10",
+  "_nodeVersion": "6.10.3",
+  "_npmUser": {
+    "name": "mattbajorek",
+    "email": "bajorek.matthew@gmail.com"
+  },
+  "dist": {
+    "shasum": "731310da0fef7ad10a49d6fa207b7dbf9627b426",
+    "tarball": "https://registry.npmjs.org/angular-material-time-picker/-/angular-material-time-picker-1.0.6.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "mattbajorek",
+      "email": "bajorek.matthew@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/angular-material-time-picker-1.0.6.tgz_1497034947764_0.6040237506385893"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/angular-material-time-picker/-/angular-material-time-picker-1.0.6.tgz"
+}

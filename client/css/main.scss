@@ -1,0 +1,108 @@
+@import "responsive";
+@import "variables";
+
+#tags-map-cont {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  width: 100%;
+  position: absolute;
+
+  .header {
+    width: 100%;
+    background-color: #FF8F00;
+    z-index: 1;
+    h2 {
+      margin: 0;
+      padding: 30px;
+      color: #ffffff;
+    }
+    .form-controls {
+      background-color: #f1f1f1;
+      height: auto;
+      padding: 20px 0px;
+      display: table;
+      width: 100%;
+      .form-input-cont {
+        position: relative;
+        float: left;
+        width: 150px;
+        text-align: left;
+        &.wide {
+          width: 210px;
+        }
+        @include media-max($layout-breakpoint-xs) {
+          text-align: center;
+          width:100%;
+          &.wide {
+            width: 100%;
+          }
+        }
+
+        .time-picker {
+          width: 100px;
+          * {
+            display: inline-block;
+            padding: 2px;
+
+          }
+          md-input-container {
+            padding: 0px;
+            margin: 0;
+            vertical-align: initial;
+            font-size: 14px;
+            line-height: 14px;
+          }
+          .time-colon {
+            top: 4px;
+          }
+          .md-icon-button {
+            display: none;
+          }
+          md-hours-minutes {
+            display: inline-block;
+          }
+        }
+        .search-btn {
+          background-color: $primary-color;
+        }
+        .tip {
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 45px;
+        }
+      }
+
+    }
+
+  }
+  .map-cont {
+    flex: 1;
+    width: 100%;
+    #map {
+      height: 100%;
+    }
+  }
+
+
+  .loader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 200px auto;
+    width: 150px;
+    /*
+    margin: 200px auto;
+    */
+    img {
+      width: 100%;
+    }
+  }
+
+
+
+}
+
