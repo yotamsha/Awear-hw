@@ -4,16 +4,38 @@
 angular.module('myApp.services')
     .service('TagsMapService', [ function () {
         var _map;
+        var infowindow = new google.maps.InfoWindow({
+            content: 'default'
+        });
+        function _listenOnMouseEvents(marker) {
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent(marker.tooltip);
+                infowindow.open(_map,marker);
+            });
+        }
+
         function _renderMarkers(data){
             for (var i = 0; i < data.length; i++) {
                 var coords = data[i].location.coordinates;
                 var latLng = new google.maps.LatLng(coords[0], coords[1]);
                 var marker = new google.maps.Marker({
                     position: latLng,
-                    map: _map
+                    map: _map,
+                    tooltip:'<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<h3 id="firstHeading" class="firstHeading">Client ID - '+data[i]._id +'</h3>'+
+                    '<div id="bodyContent">'+
+                    'Latitude: ' + coords[0] + ', &nbsp; ' +
+                    'Longitude: ' +coords[1] +
+                    '</div>'+
+                    '</div>'
                 });
+                _listenOnMouseEvents(marker);
+
             }
         }
+
         var Service = {
             /**
              * Init the heatmap UI component using the Google Maps JS API.
@@ -28,6 +50,7 @@ angular.module('myApp.services')
                     mapTypeId: 'roadmap'
                 });
                 _renderMarkers(data);
+
             }
 
         };
