@@ -26,41 +26,6 @@ function convertUTC  (date, isUTC) {
     return localTime;
 }
 
-function generateLocations(){
-    var locations = [];
-    for (var i = 1; i < 80; i++){
-        var clientId = i;
-        for (var j= 0; j < 24; j+=2){
-            var location = {
-                    "type": "Point",// 32.083368, 34.876887
-                    "coordinates": [
-                        (32.0 + getRandomInt(0,100) / 1000),
-                        (34.8 + getRandomInt(0,100) / 1000)
-                    ]
-                };
-            var hoursSetDate = new Date().setHours(j);
-            var date = new Date(hoursSetDate).setMinutes(0);
-            locations.push({time: convertUTC(new Date(date)).toISOString(),client_id : clientId, location: location});
-        }
-    }
-    //console.log(JSON.stringify(locations));
-}
-
-function generateTags(){
-    var tags = [];
-    for (var i = 1; i < 80; i++){
-        for (var j = 0; j < 24; j+=2){
-            var clientId = i;
-            var hoursSetDate = new Date().setHours(j);
-            var date = new Date(hoursSetDate).setMinutes(0);
-            tags.push({time: convertUTC(new Date(date)).toISOString(),client_id : clientId});
-        }
-
-    }
-    console.log(JSON.stringify(tags));
-}
-generateLocations();
-generateTags();
 function _getTaggedUsers(from, to) {
     console.log("Retrieving all clients with tags in the given time range");
 

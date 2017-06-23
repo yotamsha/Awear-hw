@@ -8,7 +8,8 @@ const app = express();
 // tell the app to look for static files in these directories
 app.use(express.static(path.join(__dirname, './../client')));
 routes.init(app);
+var port = process.env.PORT || 3000;
 // start the server
-app.listen(80, () => {
-    console.log('Server is running on http://localhost:80 or http://127.0.0.1:80');
+app.listen(port, () => {
+    console.log('Server is running on http://localhost:' + port);
 });
